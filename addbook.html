@@ -1,155 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <style>
-        @font-face {
-            font-family: Canela-Bold;
-            src: url(fonts/Canela-Bold.ttf);
-        }
-
-        @font-face {
-            font-family: NeueHaasDisplay-Roman;
-            src: url(fonts/NeueHaasDisplay-Roman.ttf);
-        }
-
-        .display-4 {
-            color: #FCAF17;
-            font-family: Canela-Bold;
-        }
-
-        .text-muted {
-            color: #1A0E34 !important;
-            font-family: NeueHaasDisplay-Roman;
-            font-weight: 500;
-        }
-
-        input::placeholder {
-            color: #1A0E34 !important;
-        }
-
-        label,
-        input,
-        button,
-        select,
-        option {
-            font-family: NeueHaasDisplay-Roman;
-            color: #1A0E34;
-        }
-
-        .login,
-        .image {
-            min-height: 100vh;
-        }
-
-        .bg-image {
-            background-image: url('img/addbook.png');
-            background-size: cover;
-            background-position: center center;
-        }
-
-        .logoutLblPos {
-            position: fixed;
-            right: 10px;
-            top: 5px;
-        }
-
-        #inputState {
-            position: relative;
-            margin-bottom: 4%;
-        }
-
-        #radiobutton {
-            margin-bottom: 3%;
-        }
-
-        .custom-control-input {
-            position: relative;
-        }
-    </style>
+    <link rel="stylesheet" href="css/add_book.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/add_book.js">
+    </script>
     <title>Library Management System</title>
-</head>
-
-<body>
-
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <!-- The image half -->
-            <div class="col-md-6 d-none d-md-flex bg-image"></div>
-
-            <!-- The content half -->
-            <div class="col-md-6">
-                <div class="login d-flex align-items-center py-5">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-10 col-xl-7 mx-auto">
-                                <h3 class="display-4 text-center">Add New Book!</h3>
-                                <p class="text-muted mb-3 text-center">Add a book by entering the details below.</p>
-                                <form action="addbook.php" method="POST">
-                                    <div class="form-group mb-3">
-                                        <input id="inputEmail" type="text" placeholder="Book Name" autofocus="" name="book"
-                                            class="form-control rounded-pill border-0 shadow-sm px-4" required>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <input id="inputEmail" type="text" name="author"
-                                            placeholder="Author Name" autofocus=""
-                                            class="form-control rounded-pill border-0 shadow-sm px-4" required>
-                                    </div>
-
-                                    <select id="inputState" class="form-control rounded-pill border-0 shadow-sm px-4"
-                                        name="category" class="form-group mb-3">
-                                        <option>Category</option>
-                                        <option value="Fiction">Fiction</option>
-                                        <option value="Non-Fiction">Non-Fiction</option>
-                                        <option value="Biography">Biography</option>
-                                        <option value="Business">Business</option>
-                                        <option value="Technology">Technology</option>
-                                        <option value="Science">Science</option>
-                                        <option value="Religion">Religion</option>
-                                        <option value="Sports">Sports</option>
-                                    </select>
-
-                                    <div class="form-group mb-3">
-                                        <input id="inputEmail" type="text" placeholder="Publication" autofocus=""
-                                            name="publication" class="form-control rounded-pill border-0 shadow-sm px-4"
-                                            required>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <input id="inputEmail" type="text" placeholder="Edition" autofocus=""
-                                            name="edition" class="form-control rounded-pill border-0 shadow-sm px-4"
-                                            required>
-                                    </div>
-                                    <div class="form-group mb-3">
-                                        <input id="password" type="number" placeholder="Price" name="price"
-                                            class="form-control rounded-pill border-0 shadow-sm px-4" required>
-                                    </div>
-                                    <br>
-                                    <button type="submit" name="submit"
-                                        class="btn btn-warning btn-block mb-2 rounded-pill shadow-sm">Submit
-                                    </button>
-                                    <button type="reset"
-                                    class="btn btn-dark btn-block mb-2 rounded-pill shadow-sm">Reset
-                                </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </head>
+  <body>
+    <!-- logout button -->
+    <div >
+      <button class="BUTTON" id="log_button" onclick="location.href='admin_portal.html'">Back</button>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-</body>
 
+    <div class=main_header>
+      <div class="image_user">
+        <!-- user image -->
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+        width="75" height="75"
+        viewBox="0 0 192 192"
+        style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="none"></path><path d="M96,192c-53.01934,0 -96,-42.98066 -96,-96v0c0,-53.01934 42.98066,-96 96,-96v0c53.01934,0 96,42.98066 96,96v0c0,53.01934 -42.98066,96 -96,96z" fill="#cccccc"></path><g fill="#666666"><g id="surface1"><path d="M96,40.32c-15.38812,0 -27.84,12.45188 -27.84,27.84c0,15.38813 12.45188,27.84 27.84,27.84c15.38813,0 27.84,-12.45187 27.84,-27.84c0,-15.38812 -12.45187,-27.84 -27.84,-27.84zM75.3375,105.7875c-26.29031,7.96594 -35.0175,29.58 -35.0175,29.58v16.3125h111.36v-16.3125c0,0 -8.72719,-21.61406 -35.0175,-29.58c-1.44094,10.14094 -10.14094,18.0525 -20.6625,18.0525c-10.52156,0 -19.22156,-7.91156 -20.6625,-18.0525z"></path></g></g></g></svg>
+        <h4>My Profile</h4>
+      </div>
+      <div class="heading">
+          <h1 id="portal">Library System</h1>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1 id="title">Add Book</h1>
+
+	<form id="book-form" action="">
+            <p>Fill the details of book</p>
+            
+            <label id="name-label" for="book_name">Book Code</label>
+            <input id="book_code" type="number" placeholder="Enter Book Code" required>
+            
+            <!-- book name -->
+            <label id="name-label" for="book_name">Book Name</label>
+			      <input id="book_name" type="text" placeholder="Enter book name" required>
+
+            <!-- authors name -->
+            <label id="name-label" for="book_name">Author Name(1)</label>
+            <input id="author1" type="text" placeholder="Enter Author name" required>
+            
+            
+            <label id="name-label" for="book_name">Author Name(2)</label>
+            <input id="author2" type="text" placeholder="Enter Author name" >
+            
+            <label id="name-label" for="subject">Subject</label>
+            <input id="Subject" type="text" placeholder="Enter Subject" required>
+            
+			      <label id="name-label" for="book_name">Tags</label>
+            <textarea id="tags" placeholder="Add some tags which will help you during searching.tags may be name of the book, author, subject etc."></textarea>
+
+            <div class="upload-btn-wrapper">
+                    <button class="btn">Upload a Ebook</button>
+                    <input type="file" name="myfile" />
+            </div>
+
+			<button id="submit">Finish</button>
+    
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    
+  </body>
 </html>
